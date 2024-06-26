@@ -20,30 +20,40 @@ class HomePage extends StatelessWidget {
         children: [
           MaterialButton(
             onPressed: () {
-              color:
-              Colors.purple;
-              child:
-              const Text(
-                "Profile",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+              context.pushNamed(
+                "/profile",
+                // extra: User(
+                //   name: "Francis",
+                //   role: "Player",
+                //   imageURL:
+                //       ,
+                // ),
               );
             },
+            color: Colors.orange,
+            child: const Text(
+              "Profile",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
           MaterialButton(
             onPressed: () {
-              context.pushNamed("/profile", extra: User(name: "asdsad", role: "asad", imageURL: "asdasd",),);
-            },
-            color:
-              Colors.purple,
-              child:
-              const Text(
-                "Pricing",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+              context.pushNamed(
+                "/anotherprofilePage",
+                // pathParameters: {
+                //   "anotherProfile ": "another",
+                // },
               );
+            },
+            color: Colors.purple,
+            child: const Text(
+              "Another Profile",
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           )
         ],
       ),

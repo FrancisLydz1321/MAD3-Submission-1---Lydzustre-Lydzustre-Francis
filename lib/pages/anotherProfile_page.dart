@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_midterm2/models/user.dart';
-import 'package:modular_ui/modular_ui.dart';
 
-class ProfilePage extends StatelessWidget {
+class AnotherprofilePage extends StatelessWidget {
   final User user;
 
-  const ProfilePage({
+  const AnotherprofilePage({
     super.key,
     required this.user,
   });
@@ -17,7 +16,7 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "profile",
+          "anotherprofilePage",
         ),
       ),
       body: Padding(
@@ -27,7 +26,7 @@ class ProfilePage extends StatelessWidget {
             const SizedBox(height: 20),
             CircleAvatar(
               radius: 90,
-              backgroundImage: const AssetImage('assets/images/unknown.png'),
+              backgroundImage: const AssetImage('assets/images/unknown2.png'),
             ),
             const SizedBox(height: 20),
             Container(
@@ -44,7 +43,7 @@ class ProfilePage extends StatelessWidget {
               ),
               child: ListTile(
                 title: const Text('Name'),
-                subtitle: const Text('HUSKY'),
+                subtitle: const Text('Another White Husky'),
                 leading: Icon(CupertinoIcons.person),
                 trailing: Icon(
                   Icons.arrow_forward,

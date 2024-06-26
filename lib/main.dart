@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mobile_midterm2/models/user.dart';
+import 'package:mobile_midterm2/pages/anotherProfile_page.dart';
 import 'package:mobile_midterm2/pages/home_page.dart';
 import 'package:mobile_midterm2/pages/login_page.dart';
 import 'package:mobile_midterm2/pages/profile_page.dart';
@@ -46,10 +47,21 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       name: "/profile",
-      path: "/profile ",
+      path: "/profile",
       builder: (context, state) {
-        final User? user = state.extra as User;
-        return const ProfilePage(
+        final User user = state.extra as User;
+        return ProfilePage(
+          user: user,
+        );
+      },
+    ),
+    GoRoute(
+      name: "/anotherprofilePage",
+      path: "/anotherprofilePage",
+      builder: (context, state) {
+        final User user = state.extra as User;
+
+        return AnotherprofilePage(
           user: user,
         );
       },
